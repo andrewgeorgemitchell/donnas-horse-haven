@@ -2,6 +2,7 @@ import React from 'react';
 import Layout from '~/components/Layout/Layout';
 import { SanityClient } from '../services/SanityClient';
 
+// eslint-disable-next-line @typescript-eslint/ban-types
 type EventProps = {};
 
 export async function getStaticProps() {
