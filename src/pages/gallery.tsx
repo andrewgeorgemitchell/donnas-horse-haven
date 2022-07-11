@@ -20,7 +20,7 @@ export async function getStaticProps() {
   };
 }
 
-const Gallery: React.FC<GalleryProps> = ({ gallery }) => (
+const Gallery: React.FC<GalleryProps> = () => (
   <Layout title="Gallery" description="Gallery" />
 );
 
