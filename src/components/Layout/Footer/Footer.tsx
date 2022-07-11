@@ -5,6 +5,6 @@ type FooterProps = {
   links: NavLink[];
 };
 
-const Footer: React.FC<FooterProps> = ({ links }) => <div />;
+const Footer: React.FC<FooterProps> = () => <div />;
 
 export default Footer;

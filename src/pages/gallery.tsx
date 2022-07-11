@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Layout from '~/components/Layout/Layout';
 import { SanityClient } from '~/services/SanityClient';
 
@@ -20,20 +20,8 @@ export async function getStaticProps() {
   };
 }
 
-const Gallery: React.FC<GalleryProps> = ({ gallery }) => {
-  const [open, setOpen] = useState(false);
-  const [selectedPhoto, setSelectedPhoto] = useState<any | null>(null);
-
-  const handleSelect = (image: any) => {
-    setOpen(true);
-    setSelectedPhoto(image);
-  };
-
-  const handleClose = () => {
-    setOpen(false);
-  };
-
-  return <Layout title="Gallery" description="Gallery" />;
-};
+const Gallery: React.FC<GalleryProps> = ({ gallery }) => (
+  <Layout title="Gallery" description="Gallery" />
+);
 
 export default Gallery;
