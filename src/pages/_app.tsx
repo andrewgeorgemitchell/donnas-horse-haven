@@ -4,8 +4,8 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 import Script from 'next/script';
 import React, { useEffect } from 'react';
-import { DefaultTheme } from '~/styles/theme';
 import { pageview } from '../../lib/gtag';
+import DefaultTheme from '../styles/theme';
 
 type AppProps = {
   Component: React.ComponentType<any>;
