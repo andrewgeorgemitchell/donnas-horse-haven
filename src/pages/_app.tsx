@@ -1,4 +1,3 @@
-import CssBaseline from '@material-ui/core/CssBaseline';
 import { ThemeProvider } from '@material-ui/core/styles';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
@@ -49,7 +48,7 @@ const App: React.FC<AppProps> = (props) => {
       </Head>
       <ThemeProvider theme={DefaultTheme}>
         {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
-        <CssBaseline />
+        {/* <CssBaseline /> */}
         <Component {...pageProps} />
       </ThemeProvider>
       {/* Global Site Tag (gtag.js) - Google Analytics */}
