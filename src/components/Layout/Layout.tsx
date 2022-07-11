@@ -1,18 +1,7 @@
-import { makeStyles } from '@material-ui/core/styles';
 import Head from 'next/head';
 import React, { useMemo } from 'react';
 import Footer from './Footer/Footer';
 import Header from './Header/Header';
-
-const useStyles = makeStyles(() => ({
-  root: {
-    display: `flex`,
-    flexDirection: `column`,
-    minHeight: `100vh`,
-    position: `relative`,
-    backgroundColor: `#fff`,
-  },
-}));
 
 type LayoutProps = {
   title: string;
@@ -29,38 +18,16 @@ const Layout: React.FC<LayoutProps> = ({
   tags,
   children,
 }) => {
-  const classes = useStyles();
-
   const NavLinks = useMemo(
     () => [
       {
-        label: `Kittens`,
-        link: `/cats?category=kittens`,
+        label: `Home`,
+        link: `/`,
       },
+
       {
-        label: `Adults`,
-        subLinks: [
-          {
-            label: `Queens`,
-            link: `/cats?category=queens`,
-          },
-          {
-            label: `Studs`,
-            link: `/cats?category=studs`,
-          },
-          {
-            label: `Champions`,
-            link: `/cats?category=champions`,
-          },
-        ],
-      },
-      {
-        label: `Testimonials`,
-        link: `/testimonials`,
-      },
-      {
-        label: `Tips`,
-        link: `/tips`,
+        label: `Events`,
+        link: `/events`,
       },
       {
         label: `Gallery`,
@@ -75,9 +42,9 @@ const Layout: React.FC<LayoutProps> = ({
   );
 
   return (
-    <div className={classes.root}>
+    <div>
       <Head>
-        <title>Oztoca - {title}</title>
+        <title>{title}</title>
         <meta name="description" content={description} />
         {tags?.map(({ name, content }) => (
           <meta key={name} name={name} content={content} />

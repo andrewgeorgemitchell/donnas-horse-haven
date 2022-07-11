@@ -1,7 +1,6 @@
 import { ServerStyleSheets } from '@material-ui/core/styles';
 import Document, { Head, Html, Main, NextScript } from 'next/document';
 import React from 'react';
-import { DefaultTheme } from '~/styles/theme';
 
 export default class MyDocument extends Document {
   render() {
@@ -11,7 +10,7 @@ export default class MyDocument extends Document {
           {/* PWA primary color */}
           <meta
             name="theme-color"
-            content={DefaultTheme.palette.primary.main}
+            // content={DefaultTheme.palette.primary.main}
           />
           <link
             rel="stylesheet"
